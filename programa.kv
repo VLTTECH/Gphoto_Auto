@@ -1,0 +1,73 @@
+<Gerenciador>:
+    Diretor:
+        name:'diretor'
+    Selecao:
+        name:'selecao'
+<Diretor>:
+    
+    Label:
+        text:'Planejador de Astro-Fotografias'
+        font_size:30
+        pos:(0, 270)
+        
+    Button:
+        text:'Executar'
+        size_hint:(0.2, 0.05 )
+        pos:(600, 270)
+        on_press: root.exec()
+#### Numero de Fotos do planejador
+    Label:
+        text:'Escolha o Numero de Fotos>>'
+        pos:(-250,210)
+    TextInput:
+        id: nfoto
+        pos:(600,495)
+        size_hint:(0.1, 0.05 )
+
+### Tempo de Exposição do Planejador
+    Label:
+        text:'Escolha o Tempo de Exposição em Segundos>>'
+        pos:(-190,165)
+    TextInput:
+        id: tfoto
+        pos:(600,450)
+        size_hint:(0.1, 0.05 )
+#### Definir a ISO da máquina
+    Label:
+        text:'Escolha a ISO Fotográfica>>'
+        pos:(-255,120)
+    TextInput:
+        id: isofoto
+        pos:(600,405)
+        size_hint:(0.1, 0.05 )
+#### Definir o serviço SSH
+    Label:
+        text:'Servidor ssh>>'
+        pos:(-236,75)
+    TextInput:
+        id: ssh
+        pos:(600,360)
+        size_hint:(0.2, 0.05 )
+#### Senha SSH
+    Label:
+        text:'Senha ssh>>'
+        pos:(-236,30)
+    TextInput:
+        id: senha
+        pos:(600,315)
+        size_hint:(0.15, 0.05 )
+        
+
+<Selecao>:
+    FileChooserListView:
+        id:selecao
+        Button:
+            text:'Select'
+            pos:(600,0)
+            size_hint:(0.1, 0.05 )
+            on_release:app.root.current="diretor"
+
+
+
+                
+    
